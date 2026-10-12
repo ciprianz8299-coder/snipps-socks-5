@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Recenzii snzipps lăsate de clienți." />
+    <title>Recenzii | snzipps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html#top" class="brand" aria-label="snzipps, pagina principală">
+          <span class="brand-mark"><img src="Screenshot 2026-10-12 182906.png" alt="" /></span>
+          <span>snzipps</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Meniu principal">
+          <a href="index.html#top">Acasă</a>
+          <a href="socks.html">Magazin</a>
+          <a href="subscriptions.html">Abonament</a>
+          <a href="reviews.html" aria-current="page">Recenzii</a>
+          <a href="poze.html">Poze</a>
+          <a href="faq.html">Întrebări frecvente</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Schimbă tema">Mod întunecat</button>
+          <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Redă muzica" title="Redă muzica" aria-pressed="false">
+            <svg class="audio-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+            <svg class="audio-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+            <span>Audio</span>
+          </button>
+          <a href="index.html#reviews" class="button">Lasă o recenzie</a>
+        </div>
+      </div>
+    </header>
+
+    <audio id="site-audio" preload="metadata" autoplay loop><source src="aqua-sound.mp3" type="audio/mpeg" /></audio>
+
+    <main id="top">
+      <section class="container testimonials-section" aria-labelledby="reviews-title">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow small">snzipps · experiențe</span>
+            <h1 id="reviews-title">Recenzii de la clienți</h1>
+          </div>
+          <p class="review-page-note">Aici apar toate recenziile trimise din acest browser. Sincronizarea între dispozitive necesită conectarea unui serviciu online.</p>
+        </div>
+
+        <div class="review-summary" aria-live="polite">
+          <strong class="review-average" id="review-average">—</strong>
+          <span class="stars" id="review-average-stars" aria-hidden="true">☆☆☆☆☆</span>
+          <span id="review-count">Nicio recenzie încă</span>
+        </div>
+        <div class="testimonial-grid" id="review-list" aria-live="polite"></div>
+        <p class="review-empty" id="review-empty" role="status" hidden>Nu există încă recenzii trimise din acest browser.</p>
+        <a href="index.html#reviews" class="button review-page-action">Lasă o recenzie</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="index.html#top">© <span id="year"></span> snzipps</a>
+        <a href="socks.html">Magazin</a>
+        <a href="faq.html">Întrebări frecvente</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

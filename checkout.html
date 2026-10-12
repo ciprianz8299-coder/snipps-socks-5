@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Finalizează comanda ta snzipps." />
+    <title>Finalizarea comenzii | snzipps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="checkout-body">
+    <header class="checkout-header">
+      <div class="container checkout-header-inner">
+        <a href="index.html#top" class="brand" aria-label="snzipps, pagina principală">
+          <span class="brand-mark"><img src="Screenshot 2026-10-12 182906.png" alt="" /></span>
+          <span>snzipps</span>
+        </a>
+        <a class="checkout-back" href="socks.html">← Înapoi la magazin</a>
+        <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Redă muzica" title="Redă muzica" aria-pressed="false">
+          <svg class="audio-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+          <svg class="audio-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+          <span>Audio</span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Schimbă tema">Mod întunecat</button>
+      </div>
+    </header>
+
+    <audio id="site-audio" preload="metadata" autoplay loop><source src="aqua-sound.mp3" type="audio/mpeg" /></audio>
+
+    <main class="checkout-layout">
+      <section class="checkout-main" aria-labelledby="checkout-title">
+        <span class="eyebrow small">snzipps · comandă</span>
+        <h1 id="checkout-title">Finalizarea comenzii</h1>
+        <p class="checkout-intro">Unde trimitem confortul tău?</p>
+
+        <form id="checkout-form">
+          <h2 class="checkout-section-title">Date de livrare</h2>
+          <div class="checkout-fields">
+            <label class="checkout-field" for="checkout-name">
+              Nume complet
+              <input id="checkout-name" name="name" type="text" autocomplete="name" required />
+            </label>
+            <label class="checkout-field" for="checkout-email">
+              Email
+              <input id="checkout-email" name="email" type="email" autocomplete="email" required />
+            </label>
+            <label class="checkout-field full" for="checkout-phone">
+              Telefon
+              <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label class="checkout-field full" for="checkout-address">
+              Adresă
+              <input id="checkout-address" name="address" type="text" autocomplete="street-address" required />
+            </label>
+            <label class="checkout-field" for="checkout-city">
+              Oraș
+              <input id="checkout-city" name="city" type="text" autocomplete="address-level2" required />
+            </label>
+            <label class="checkout-field" for="checkout-postal">
+              Cod poștal
+              <input id="checkout-postal" name="postal-code" type="text" autocomplete="postal-code" required />
+            </label>
+          </div>
+
+          <label class="newsletter-optin" for="checkout-news">
+            <input id="checkout-news" name="store-news" type="checkbox" />
+            <span>Vreau să primesc pe email noutăți despre produse și oferte. Mă pot dezabona oricând.</span>
+          </label>
+
+          <button class="button checkout-submit" id="checkout-submit" type="submit">Confirmă comanda</button>
+          <p class="checkout-note">Aceasta este o pagină demo. Datele introduse nu sunt trimise sau salvate.</p>
+          <p class="checkout-status" id="checkout-status" role="status" hidden></p>
+        </form>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="order-summary-title">
+        <h2 id="order-summary-title">Comanda ta</h2>
+        <ul class="checkout-items" id="checkout-items" aria-live="polite"></ul>
+        <p class="checkout-empty" id="checkout-empty" hidden>Coșul este gol. <a href="socks.html">Alege o pereche din magazin.</a></p>
+        <div class="checkout-total"><span>Subtotal</span><strong id="checkout-total">0 lei</strong></div>
+        <p class="checkout-shipping">Transportul se calculează la finalizarea comenzii.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="index.html#top">© <span id="year"></span> snzipps</a>
+        <a href="faq.html">Întrebări frecvente</a>
+        <a href="socks.html">Înapoi la magazin</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

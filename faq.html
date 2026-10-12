@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Răspunsuri despre snzipps, colecția de șosete și magazin." />
+    <title>Întrebări frecvente | snzipps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html#top" class="brand" aria-label="snzipps, pagina principală">
+          <span class="brand-mark"><img src="Screenshot 2026-10-12 182906.png" alt="" /></span>
+          <span>snzipps</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Meniu principal">
+          <a href="index.html#top">Acasă</a>
+          <a href="socks.html#shop">Magazin</a>
+          <a href="subscriptions.html">Abonament</a>
+          <a href="poze.html">Poze</a>
+          <a href="faq.html" aria-current="page">Întrebări frecvente</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Schimbă tema">Mod întunecat</button>
+          <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Redă muzica" title="Redă muzica" aria-pressed="false">
+            <svg class="audio-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+            <svg class="audio-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+            <span>Audio</span>
+          </button>
+          <a href="socks.html" class="button">Vezi produsele</a>
+        </div>
+      </div>
+    </header>
+
+    <audio id="site-audio" preload="metadata" autoplay loop><source src="aqua-sound.mp3" type="audio/mpeg" /></audio>
+
+    <main class="faq-layout" id="top">
+      <section class="faq-intro" aria-labelledby="faq-title">
+        <span class="eyebrow small">Ajutor snzipps</span>
+        <h1 id="faq-title">Întrebări frecvente</h1>
+        <p>Răspunsuri despre brand, produse și magazin.</p>
+        <nav class="faq-topics" aria-label="Categorii de întrebări">
+          <a href="#despre">Despre snzipps</a>
+          <a href="#produse">Produse</a>
+          <a href="#magazin">Magazin</a>
+        </nav>
+      </section>
+
+      <section class="faq-group" id="despre" aria-labelledby="faq-about-title">
+        <h2 id="faq-about-title">Despre snzipps</h2>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Ce este snzipps?</summary>
+          <p>snzipps este un brand dedicat șosetelor de zi cu zi, cu accent pe confort, culori și modele ușor de purtat.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Ce inspiră colecțiile snzipps?</summary>
+          <p>Ideea este simplă: obiectele pe care le porți zilnic pot fi confortabile și pot avea, în același timp, un strop de personalitate.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Unde pot afla noutățile despre brand?</summary>
+          <p>Poți bifa opțiunea pentru noutăți prin email în formularul de checkout. Abonarea este opțională.</p>
+        </details>
+      </section>
+
+      <section class="faq-group" id="produse" aria-labelledby="faq-products-title">
+        <h2 id="faq-products-title">Produse</h2>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Din ce materiale sunt făcute șosetele?</summary>
+          <p>Compoziția exactă depinde de model și va fi afișată în detaliile fiecărui produs înainte ca magazinul să accepte comenzi reale.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Cum aleg mărimea potrivită?</summary>
+          <p>Consultă ghidul de mărimi asociat produsului. Ghidul și disponibilitatea mărimilor vor fi publicate odată cu informațiile complete ale colecției.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Cum trebuie îngrijite șosetele?</summary>
+          <p>Urmează instrucțiunile de pe eticheta modelului ales. Recomandările pot diferi în funcție de material.</p>
+        </details>
+      </section>
+
+      <section class="faq-group" id="magazin" aria-labelledby="faq-store-title">
+        <h2 id="faq-store-title">Magazin și comenzi</h2>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Pot plasa o comandă pe acest site?</summary>
+          <p>Site-ul este momentan o demonstrație. Formularul de checkout nu trimite comenzi și nu salvează datele introduse.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Care sunt costul și timpul de livrare?</summary>
+          <p>Detaliile de livrare nu sunt încă configurate. Costul și termenul vor fi afișate clar înainte de lansarea comenzilor.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Care este politica de retur?</summary>
+          <p>Condițiile de retur vor fi publicate înainte ca magazinul să accepte comenzi reale. Nu vrem să promitem termeni care nu sunt încă stabiliți.</p>
+        </details>
+        <details class="faq-item" name="snzipps-faq">
+          <summary>Există un abonament pentru livrări săptămânale?</summary>
+          <p>Da. Poți alege un plan lunar de €8 sau anual de €80 pentru o pereche livrată în fiecare săptămână. Pagina de abonament este momentan o demonstrație și nu procesează plăți.</p>
+        </details>
+      </section>
+
+      <p class="faq-contact">Ai o altă întrebare? <a href="socks.html">Explorează colecția</a> sau revino la <a href="index.html">pagina principală</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="index.html#top">© <span id="year"></span> snzipps</a>
+        <a href="socks.html">Înapoi la magazin</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

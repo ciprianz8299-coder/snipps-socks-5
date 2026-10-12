@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explorează colecția snzipps de șosete confortabile, colorate și rezistente."
+    />
+    <title>Magazin | snzipps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html#top" class="brand" aria-label="snzipps, pagina principală">
+          <span class="brand-mark"><img src="Screenshot 2026-10-12 182906.png" alt="" /></span>
+          <span>snzipps</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Meniu principal">
+          <a href="index.html#new">Confort</a>
+          <a href="index.html#best">Top vânzări</a>
+          <a href="#shop" aria-current="page">Magazin</a>
+          <a href="subscriptions.html">Abonament</a>
+          <a href="reviews.html">Recenzii</a>
+          <a href="poze.html">Poze</a>
+          <a href="faq.html">Întrebări frecvente</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Schimbă tema">Mod întunecat</button>
+          <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Redă muzica" title="Redă muzica" aria-pressed="false">
+            <svg class="audio-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+            <svg class="audio-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+            <span>Audio</span>
+          </button>
+          <button class="cart-pill" id="cart-toggle" type="button" aria-label="Deschide coșul de cumpărături" aria-haspopup="dialog" aria-controls="cart-dialog">
+            Coș <span id="cart-count" aria-live="polite">0</span>
+          </button>
+          <a href="#shop" class="button">Vezi produsele</a>
+        </div>
+      </div>
+    </header>
+
+    <audio id="site-audio" preload="metadata" autoplay loop><source src="aqua-sound.mp3" type="audio/mpeg" /></audio>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-panel">
+        <div class="cart-header">
+          <div>
+            <span class="eyebrow small">Comanda ta</span>
+            <h2 id="cart-title">Coșul tău</h2>
+          </div>
+          <button class="cart-close" type="button" aria-label="Închide coșul">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty" hidden>
+          <span class="cart-empty-mark" aria-hidden="true">S</span>
+          <p>Coșul tău este gol.</p>
+          <span>Alege o pereche care ți se potrivește.</span>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">0 lei</strong></div>
+          <p>Transportul se calculează la finalizarea comenzii.</p>
+          <a class="button cart-checkout" href="checkout.html">Finalizează comanda</a>
+          <button class="button cart-continue" type="button">Continuă cumpărăturile</button>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="top" class="catalog-main">
+      <section class="container catalog-heading" aria-labelledby="catalog-title">
+        <div>
+          <a class="catalog-back" href="index.html">← Înapoi la pagina principală</a>
+          <span class="eyebrow">Magazinul snzipps</span>
+          <h1 id="catalog-title">Colecția completă</h1>
+          <p>20 de modele colorate, făcute pentru confortul de zi cu zi.</p>
+        </div>
+        <div class="catalog-count" aria-label="20 de produse în colecție"><strong>20</strong><span>produse<br />în colecție</span></div>
+      </section>
+
+      <section class="container catalog-products" id="shop">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow small">Alege-ți perechea</span>
+            <h2 id="catalog-list-title">Toate șosetele</h2>
+          </div>
+          <p>Prețuri în lei · Livrare rapidă</p>
+        </div>
+
+        <div class="products-grid" id="catalog-grid" aria-labelledby="catalog-list-title">
+          <article class="product-card">
+            <div class="product-image peach-bg">
+              <div class="sock-figure coral"><span class="sock-band"></span><span class="sock-toe"></span></div>
+            </div>
+            <div class="product-meta">
+              <div class="product-tags">
+                <span>Clasic</span>
+                <span class="rating">★★★★★</span>
+              </div>
+              <h3 class="product-title">Classic Crew</h3>
+              <p class="product-copy">Confort colorat pentru zile pline și rutine ușoare.</p>
+              <div class="product-bottom">
+                <span class="price">22 lei</span>
+                <button type="button" class="add-button">Adaugă în coș</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image gold-bg">
+              <div class="sock-figure golden"><span class="sock-band"></span><span class="sock-toe"></span></div>
+            </div>
+            <div class="product-meta">
+              <div class="product-tags">
+                <span>Sport</span>
+                <span class="rating">★★★★★</span>
+              </div>
+              <h3 class="product-title">Performance Run</h3>
+              <p class="product-copy">Susținere ușoară și elastică pentru orice mișcare.</p>
+              <div class="product-bottom">
+                <span class="price">27 lei</span>
+                <button type="button" class="add-button">Adaugă în coș</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image lilac-bg">
+              <div class="sock-figure purple"><span class="sock-band"></span><span class="sock-toe"></span></div>
+            </div>
+            <div class="product-meta">
+              <div class="product-tags">
+                <span>Ediție limitată</span>
+                <span class="rating">★★★★★</span>
+              </div>
+              <h3 class="product-title">Velvet Pop</h3>
+              <p class="product-copy">O pată de culoare veselă pentru ținutele tale.</p>
+              <div class="product-bottom">
+                <span class="price">25 lei</span>
+                <button type="button" class="add-button">Adaugă în coș</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image mint-bg">
+              <div class="sock-figure mint"><span class="sock-band"></span><span class="sock-toe"></span></div>
+            </div>
+            <div class="product-meta">
+              <div class="product-tags">
+                <span>Moale</span>
+                <span class="rating">★★★★★</span>
+              </div>
+              <h3 class="product-title">Night Knit</h3>
+              <p class="product-copy">Textură călduroasă pentru seri liniștite acasă.</p>
+              <div class="product-bottom">
+                <span class="price">30 lei</span>
+                <button type="button" class="add-button">Adaugă în coș</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image mint-bg"><div class="sock-figure coral"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta">
+              <div class="product-tags"><span>Nou</span><span class="rating">★★★★★</span></div>
+              <h3 class="product-title">Sunday Stripe</h3>
+              <p class="product-copy">Dungi vesele și bumbac moale pentru fiecare zi.</p>
+              <div class="product-bottom"><span class="price">24 lei</span><button type="button" class="add-button">Adaugă în coș</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image peach-bg"><div class="sock-figure golden"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta">
+              <div class="product-tags"><span>Esential</span><span class="rating">★★★★★</span></div>
+              <h3 class="product-title">Cloud Step</h3>
+              <p class="product-copy">Talpă pufoasă și atingere fină, de dimineață până seara.</p>
+              <div class="product-bottom"><span class="price">28 lei</span><button type="button" class="add-button">Adaugă în coș</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image gold-bg"><div class="sock-figure mint"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta">
+              <div class="product-tags"><span>Colorat</span><span class="rating">★★★★★</span></div>
+              <h3 class="product-title">Citrus Pop</h3>
+              <p class="product-copy">Un strop de energie pentru pașii de zi cu zi.</p>
+              <div class="product-bottom"><span class="price">23 lei</span><button type="button" class="add-button">Adaugă în coș</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image lilac-bg"><div class="sock-figure purple"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta">
+              <div class="product-tags"><span>Set cadou</span><span class="rating">★★★★★</span></div>
+              <h3 class="product-title">Weekend Pair</h3>
+              <p class="product-copy">Două perechi confortabile, gata de luat în aventură.</p>
+              <div class="product-bottom"><span class="price">39 lei</span><button type="button" class="add-button">Adaugă în coș</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image peach-bg"><div class="sock-figure mint"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Clasic</span><span class="rating">★★★★★</span></div><h3 class="product-title">Mint Morning</h3><p class="product-copy">O nuanță proaspătă și un tricot moale, respirabil.</p><div class="product-bottom"><span class="price">26 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image gold-bg"><div class="sock-figure coral"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Sport</span><span class="rating">★★★★★</span></div><h3 class="product-title">Coral Sprint</h3><p class="product-copy">Susținere lejeră pentru antrenamente și plimbări lungi.</p><div class="product-bottom"><span class="price">29 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image lilac-bg"><div class="sock-figure golden"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Nou</span><span class="rating">★★★★★</span></div><h3 class="product-title">Honeycomb</h3><p class="product-copy">Textură fină cu o notă caldă de culoare aurie.</p><div class="product-bottom"><span class="price">25 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image mint-bg"><div class="sock-figure purple"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Ediție limitată</span><span class="rating">★★★★★</span></div><h3 class="product-title">Lilac Haze</h3><p class="product-copy">Tricot delicat într-o nuanță pastelată, ușor de purtat.</p><div class="product-bottom"><span class="price">31 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image gold-bg"><div class="sock-figure mint"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Confort</span><span class="rating">★★★★★</span></div><h3 class="product-title">Garden Walk</h3><p class="product-copy">Bumbac moale pentru pași relaxați în fiecare zi.</p><div class="product-bottom"><span class="price">23 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image peach-bg"><div class="sock-figure purple"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Moale</span><span class="rating">★★★★★</span></div><h3 class="product-title">Plum Pudding</h3><p class="product-copy">O pereche călduroasă pentru serile răcoroase.</p><div class="product-bottom"><span class="price">32 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image mint-bg"><div class="sock-figure golden"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Colorat</span><span class="rating">★★★★★</span></div><h3 class="product-title">Sunny Side</h3><p class="product-copy">Galben luminos și confort ușor pentru zile însorite.</p><div class="product-bottom"><span class="price">24 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image lilac-bg"><div class="sock-figure coral"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Esential</span><span class="rating">★★★★★</span></div><h3 class="product-title">Rose Dusk</h3><p class="product-copy">Un ton delicat și o potrivire comodă, zi după zi.</p><div class="product-bottom"><span class="price">27 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image gold-bg"><div class="sock-figure purple"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Set cadou</span><span class="rating">★★★★★</span></div><h3 class="product-title">Soft Landing</h3><p class="product-copy">Confort de pluș și culori vesele într-un set cadou.</p><div class="product-bottom"><span class="price">42 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image peach-bg"><div class="sock-figure mint"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Sport</span><span class="rating">★★★★★</span></div><h3 class="product-title">Breeze Runner</h3><p class="product-copy">Material aerisit și elastic pentru mișcare fără griji.</p><div class="product-bottom"><span class="price">29 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image mint-bg"><div class="sock-figure golden"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Clasic</span><span class="rating">★★★★★</span></div><h3 class="product-title">Golden Hour</h3><p class="product-copy">Un model simplu, cu o culoare caldă și luminoasă.</p><div class="product-bottom"><span class="price">26 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image lilac-bg"><div class="sock-figure coral"><span class="sock-band"></span><span class="sock-toe"></span></div></div>
+            <div class="product-meta"><div class="product-tags"><span>Nou</span><span class="rating">★★★★★</span></div><h3 class="product-title">Berry Weekend</h3><p class="product-copy">O pereche jucăușă, potrivită pentru ieșiri și relaxare.</p><div class="product-bottom"><span class="price">25 lei</span><button type="button" class="add-button">Adaugă în coș</button></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> snzipps</span>
+        <span>Design pentru confort. Creat pentru durată.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

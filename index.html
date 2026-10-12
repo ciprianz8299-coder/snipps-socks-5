@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="snzipps sells premium socks for everyday comfort, sports, and style."
+    />
+    <title>snzipps | Premium socks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="#top" class="brand" aria-label="snzipps home">
+          <span class="brand-mark"><img src="Screenshot 2026-10-12 182906.png" alt="" /></span>
+          <span>snzipps</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Deschide meniu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Meniu principal">
+          <a href="#new">Noi</a>
+          <a href="#best">Top vânzări</a>
+          <a href="socks.html">Magazin</a>
+          <a href="subscriptions.html">Abonament</a>
+          <a href="reviews.html">Recenzii</a>
+          <a href="poze.html">Poze</a>
+          <a href="faq.html">Întrebări frecvente</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Schimbă tema">Mod întunecat</button>
+          <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Redă muzica" title="Redă muzica" aria-pressed="false">
+            <svg class="audio-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z" /></svg>
+            <svg class="audio-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+            <span>Audio</span>
+          </button>
+          <button class="cart-pill" id="cart-toggle" type="button" aria-label="Deschide coșul de cumpărături" aria-haspopup="dialog" aria-controls="cart-dialog">
+            Coș <span id="cart-count" aria-live="polite">0</span>
+          </button>
+          <a href="socks.html" class="button">Cumpără acum</a>
+        </div>
+      </div>
+    </header>
+
+    <audio id="site-audio" preload="metadata" autoplay loop><source src="aqua-sound.mp3" type="audio/mpeg" /></audio>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-panel">
+        <div class="cart-header">
+          <div>
+            <span class="eyebrow small">Comanda ta</span>
+            <h2 id="cart-title">Coșul tău</h2>
+          </div>
+          <button class="cart-close" type="button" aria-label="Închide coșul">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty" hidden>
+          <span class="cart-empty-mark" aria-hidden="true">S</span>
+          <p>Coșul tău este gol.</p>
+          <span>Alege o pereche care ți se potrivește.</span>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">0 lei</strong></div>
+          <p>Transportul se calculează la finalizarea comenzii.</p>
+          <a class="button cart-checkout" href="checkout.html">Finalizează comanda</a>
+          <button class="button cart-continue" type="button">Continuă cumpărăturile</button>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <span class="eyebrow">Făcut pentru confort</span>
+            <h1>Începe ziua cu pasul cel mai confortabil.</h1>
+            <p>
+              Șosete premium create pentru fiecare moment al zilei — de la muncă,
+              până la alergări de weekend. Confecționate din material respirabil,
+              cu căptușeală moale și confort de lungă durată.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="button">Vezi colecția</a>
+              <a href="#new" class="button secondary">Noi apariții</a>
+            </div>
+
+            <div class="stats" aria-label="Statistici magazin">
+              <div class="stat">
+                <strong>12k+</strong>
+                <span>clienți mulțumiți</span>
+              </div>
+              <div class="stat">
+                <strong>4.9/5</strong>
+                <span>recenzie medie</span>
+              </div>
+              <div class="stat">
+                <strong class="delivery-stat">Delivered with <span>SAMEDAY</span></strong>
+              </div>
+            </div>
+          </div>
+
+          <a class="hero-card" href="#shop" aria-label="Vezi colecția recentă de șosete">
+            <div class="sock-display">
+              <span class="badge top">Top vânzări</span>
+              <div class="sock-art">
+                <div class="sock-pair">
+                  <div class="sock"></div>
+                  <div class="sock"></div>
+                </div>
+              </div>
+              <div class="badge bottom">De la 22 lei</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="container spotlight" id="new" aria-label="Caracteristici produse">
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 8h11a3 3 0 1 0-3-3M2 12h16a3 3 0 1 1-3 3M4 16h7a3 3 0 1 1-3 3" /></svg>
+          </div>
+          <h3>Material respirabil</h3>
+          <p>Fibrele permit aerisirea și te țin proaspăt pe parcursul zilei.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7.5 18h9a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6 1.8A3.7 3.7 0 0 0 7.5 18Z" /><path d="m9 14 2 2 4-4" /></svg>
+          </div>
+          <h3>Confort spumos</h3>
+          <p>Protecție moale pentru fiecare pas și o senzație de catifelare.</p>
+        </article>
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+          </div>
+          <h3>Durabilitate zilnică</h3>
+          <p>Construcție rezistentă, elastică și sigură în folosire constantă.</p>
+        </article>
+      </section>
+
+      <section class="container slider-section" id="shop">
+        <div class="section-header" id="best">
+          <div>
+            <span class="eyebrow small">Colecții recente</span>
+            <h2>Reîmprospătează sertarul cu șosete.</h2>
+          </div>
+          <div class="slider-controls" aria-label="Comenzi slider">
+            <button type="button" class="slider-button prev" aria-label="Produs anterior"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button type="button" class="slider-button next" aria-label="Produs următor"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+          </div>
+        </div>
+
+        <div class="product-slider" aria-live="polite">
+          <div class="slider-track">
+            <article class="product-slide">
+              <div class="product-card">
+                <div class="product-image peach-bg">
+                  <div class="sock-figure coral">
+                    <span class="sock-band"></span>
+                    <span class="sock-toe"></span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-tags">
+                    <span>Clasic</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                  <h3 class="product-title">Classic Crew</h3>
+                  <p class="product-copy">Confort vibrant pentru zile pline și rutine ușoare.</p>
+                  <div class="product-bottom">
+                    <span class="price">22 lei</span>
+                    <button type="button" class="add-button">Adaugă în coș</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-slide">
+              <div class="product-card">
+                <div class="product-image gold-bg">
+                  <div class="sock-figure golden">
+                    <span class="sock-band"></span>
+                    <span class="sock-toe"></span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-tags">
+                    <span>Running</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                  <h3 class="product-title">Performance Run</h3>
+                  <p class="product-copy">Susținere ușoară și elastică pentru orice mișcare.</p>
+                  <div class="product-bottom">
+                    <span class="price">27 lei</span>
+                    <button type="button" class="add-button">Adaugă în coș</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-slide">
+              <div class="product-card">
+                <div class="product-image lilac-bg">
+                  <div class="sock-figure purple">
+                    <span class="sock-band"></span>
+                    <span class="sock-toe"></span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-tags">
+                    <span>Limitată</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                  <h3 class="product-title">Velvet Pop</h3>
+                  <p class="product-copy">Un strop de culoare veselă pentru orice ținută.</p>
+                  <div class="product-bottom">
+                    <span class="price">25 lei</span>
+                    <button type="button" class="add-button">Adaugă în coș</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-slide">
+              <div class="product-card">
+                <div class="product-image mint-bg">
+                  <div class="sock-figure mint">
+                    <span class="sock-band"></span>
+                    <span class="sock-toe"></span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <div class="product-tags">
+                    <span>Confort</span>
+                    <span class="rating">★★★★★</span>
+                  </div>
+                  <h3 class="product-title">Night Knit</h3>
+                  <p class="product-copy">Textură foarte moale pentru sosete de seară și odihnă.</p>
+                  <div class="product-bottom">
+                    <span class="price">30 lei</span>
+                    <button type="button" class="add-button">Adaugă în coș</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container info-section">
+        <div class="section-header">
+          <h2>De ce ne aleg clienții</h2>
+          <p>Confortul de zi cu zi, cu puțină culoare în plus.</p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card warm">
+            <span class="story-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" /><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z" /></svg></span>
+            <h3>Moi de la prima purtare</h3>
+            <p>Tricot plăcut la atingere, pentru confort pe tot parcursul zilei.</p>
+          </article>
+          <article class="story-card cool">
+            <span class="story-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13.5 2 5 13h6l-.5 9L19 11h-6l.5-9Z" /></svg></span>
+            <h3>Ușoare și respirabile</h3>
+            <p>Țesătura aerisită oferă o senzație lejeră când ești în mișcare.</p>
+          </article>
+          <article class="story-card mint">
+            <span class="story-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 7v13" /><path d="M12 7H7.5a2.5 2.5 0 1 1 2.3-3.5L12 7Zm0 0h4.5a2.5 2.5 0 1 0-2.3-3.5L12 7Z" /></svg></span>
+            <h3>Un cadou cu personalitate</h3>
+            <p>Culori vesele și modele ușor de oferit cuiva drag.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container process-section">
+        <div class="section-header">
+          <h2>Cum funcționează</h2>
+          <p>De la alegere la livrare, în câțiva pași simpli.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span>01</span>
+            <h3>Alege stilul</h3>
+            <p>Preferi perechea zilnică, sportiva sau un set cadou colorat.</p>
+          </div>
+          <div class="process-step">
+            <span>02</span>
+            <h3>Completează setul</h3>
+            <p>Adaugă culori potrivite și combinații premium în secunde.</p>
+          </div>
+          <div class="process-step">
+            <span>03</span>
+            <h3>Primește livrarea</h3>
+            <p>Expediem rapid, ambalăm cu grijă și păstrăm totul simplu.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container testimonials-section" id="reviews" aria-labelledby="home-reviews-title">
+        <div class="review-overview">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow small">Păreri fără filtru</span>
+              <h2 id="home-reviews-title">Povești de la clienții noștri</h2>
+            </div>
+            <a class="button secondary review-all-link" href="reviews.html">Toate recenziile</a>
+          </div>
+          <div class="review-summary" aria-live="polite">
+            <strong class="review-average" id="review-average">—</strong>
+            <span class="stars" id="review-average-stars" aria-hidden="true">☆☆☆☆☆</span>
+            <span id="review-count">Nicio recenzie încă</span>
+          </div>
+          <div class="testimonial-grid" id="review-list" data-review-limit="3" aria-live="polite"></div>
+          <p class="review-empty" id="review-empty" role="status" hidden>Fii primul care lasă o recenzie.</p>
+        </div>
+
+        <form class="review-form" id="review-form">
+          <div class="review-form-heading">
+            <span class="eyebrow small">Părerea ta contează</span>
+            <h3>Lasă o recenzie</h3>
+          </div>
+          <div class="review-fields">
+            <label class="review-field" for="review-name">
+              Numele tău
+              <input id="review-name" name="name" type="text" maxlength="60" autocomplete="name" required />
+            </label>
+            <label class="review-field" for="review-rating">
+              Evaluare
+              <select id="review-rating" name="rating" required>
+                <option value="5">5 stele · Excelent</option>
+                <option value="4">4 stele · Foarte bine</option>
+                <option value="3">3 stele · Bine</option>
+                <option value="2">2 stele · Acceptabil</option>
+                <option value="1">1 stea · Slab</option>
+              </select>
+            </label>
+            <label class="review-field review-field-full" for="review-comment">
+              Recenzia ta
+              <textarea id="review-comment" name="comment" rows="4" maxlength="600" required></textarea>
+            </label>
+          </div>
+          <div class="review-form-footer">
+            <p class="review-note">Recenziile se salvează în acest browser și apar pe pagina Recenzii. Pentru sincronizare între dispozitive este necesar un serviciu online.</p>
+            <button class="button" type="submit">Publică recenzia</button>
+          </div>
+          <p class="review-status" id="review-status" role="status" hidden></p>
+        </form>
+      </section>
+
+      <section class="container">
+        <div class="banner">
+          <div>
+            <h3>Îmbunătățește-ți confortul zilnic.</h3>
+            <p>Alătură-te miilor de clienți care aleg calitate, susținere și stil.</p>
+          </div>
+          <a href="#shop" class="button">Ia-ți perechea</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> snzipps</span>
+        <span>Design pentru confort. Creat pentru durată.</span>
+        <a class="footer-video-link" href="https://www.youtube.com/watch?v=GMThmDxqTkU" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
